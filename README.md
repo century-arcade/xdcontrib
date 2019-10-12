@@ -21,13 +21,13 @@ xdfile/puz2xd.py test.puz > test.xd
 ## Converting puzzles in bulk
 
 ```
-sh convert.sh <SRCDIR> <DESTDIR>
+sh convert.sh <srcdir> <destdir>
 ```
 
 where:
 
-- <SRCDIR> is the directory holding the .puz
-- <DESTDIR> is the the directory which will hold the .xd
+- `<srcdir>` is the directory holding the .puz
+- `<destdir>` is the the directory which will hold the .xd
 
 ## Filenames
 
