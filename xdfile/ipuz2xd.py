@@ -34,6 +34,7 @@ def decode(s):
     s = s.replace('\x86', '†')
     s = s.replace('\xd3','"')
     s = s.replace('\xd4','"')
+    s = s.replace('&amp;', '&')
     s = urllib.parse.unquote(s)
     return s
 
