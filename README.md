@@ -10,7 +10,7 @@ In a terminal window, type (or some variant according to your system):
 
 `pip3 install -r requirements.txt`
 
-## Convert one puzzle on the command line
+## Convert one puz puzzle on the command line
 
 Download a puzzle, for example from the [eminent Brendan Emmett Quigley](https://www.brendanemmettquigley.com/files/1199AyeAye.puz):
 
@@ -18,10 +18,34 @@ Download a puzzle, for example from the [eminent Brendan Emmett Quigley](https:/
 xdfile/puz2xd.py test.puz > test.xd
 ```
 
-## Converting puzzles in bulk
+## Convert one ipuz puzzle on the command line
+
+The `crossword` module's `from_ipuz` needed to be updated, due to changes in the `ipuz` Python module.
+
+It has been incorporated into this repo with those updates.
+
+First, ensure that Python can find it
 
 ```
-sh convert.sh <srcdir> <destdir>
+export PYTHONPATH=.
+```
+
+and then
+
+```
+xdfile/ipuz2xd.py test.ipuz > test.xd
+```
+
+## Converting puz/ipuz puzzles in bulk
+
+```
+sh convert_puz.sh <srcdir> <destdir>
+```
+
+or
+
+```
+sh convert_ipuz.sh <srcdir> <destdir>
 ```
 
 where:
