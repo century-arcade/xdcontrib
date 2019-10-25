@@ -46,8 +46,7 @@ def parse_ipuz(contents, filename):
     rebus_shorthands = list("⚷⚳♇♆⛢♄♃♂♁♀☿♹♸♷♶♵♴♳⅘⅗⅖⅕♚♛♜♝♞♟⚅⚄⚃⚂⚁⚀♣♦♥♠+&%$@?*zyxwvutsrqponmlkjihgfedcba0987654321")
 
     # i need a .load to create the ipuz_dict, and then maybe i am home free
-    with open(filename) as ipuz_file:
-        ipuz_dict = ipuz.read(ipuz_file.read())
+    ipuz_dict = ipuz.read(contents.decode("utf-8"))
     puzzle = crossword.from_ipuz(ipuz_dict)
 
     grid_dict = dict(list(zip(string.ascii_uppercase, string.ascii_uppercase)))
@@ -93,7 +92,6 @@ def parse_ipuz(contents, filename):
 
 
                     grid_dict[ch] = cellch
-                    print(grid_dict[ch])
                 rowstr += grid_dict[ch]
 
         xd.grid.append(rowstr)
