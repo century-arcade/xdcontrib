@@ -84,3 +84,13 @@ If the publication is legitimate but unknown, add a row to `publications.tsv`
 in the root of the gxd repo.
 
 ---
+
+# Citing xd
+
+If you publish any research or results using the xd crossword corpus, please cite xd accordingly:
+
+```
+Pwanson, Saul. (2019). "xd Crossword Corpus." Retrieved from http://xd.saul.pw
+```
+
+The year of publication should be the year that the corpus was accessed.
